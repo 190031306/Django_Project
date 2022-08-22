@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>
+                ::USER HOME::
+            </title>
+        </head>
+    <body>
+        <h2 align=center>Welcome {{uname}}</h2><hr color="red"><hr color="red">
+        <br><br>
+        <a href="{% url 'userhome' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'changepwd' %}">Change password</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'searchcontent' %}">Search Content</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'ulogout' %}">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        <h3 align="center"><u>Display Content</u></h3>
+        {% for c in content %}
+
+        {{c.category}}<br>
+        {{c.link}}<br>
+        <a href="{{c.link}}">{{c.link}}</a> 
+        {{c.description}}<br>
+        <hr color="blue">
+
+        {% empty %}
+        <h3 align=center>No Records Found</h3>
+
+
+
+        {% endfor %}
+        
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>
+                ::USER HOME::
+            </title>
+        </head>
+    <body>
+        <h2 align=center>Welcome {{uname}}</h2><hr color="red"><hr color="red">
+        <br><br>
+        <a href="{% url 'userhome' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'changepwd' %}">Change password</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'ulogout' %}">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <br><br>
+        <h3 align="center"><u>Change Password</u></h3>
+        <form method="post" action="{% url 'changepwd1' %}">
+            {% csrf_token %}
+            <table align=center width=400 height=150>
+                <tr>
+                    <td><b style="color:blue">Enter Old Password</b></td>
+                    <td><input type="Password" name="opwd" required></td>
+                </tr>
+                <tr>
+                    <td><b style="color:blue">Enter New Password</b></td>
+                    <td><input type="Password" name="npwd" required></td>
+                </tr>
+                <tr>
+                    <td align=center><input type="submit" value="Change"></td>
+                    <td align=center><input type="reset" value="clear"></td>
+                </tr>
+            </table>
+        </form>
+
+
+
+
+    </body>
+</html>

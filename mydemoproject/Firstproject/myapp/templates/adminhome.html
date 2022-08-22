@@ -1,0 +1,27 @@
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>
+                ::Admin Home::
+            </title>
+        </head>
+    <body>
+        <h2 align=center>Django CRUD Operations</h2><hr color="red"><hr color="red">
+        <br><br>
+        <a href="{% url 'adminhome' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'viewusers'  %}">View Users</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'deleteuserbyid'  %}">Deleteuserbyid</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'addcontent'  %}">Add content</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'alogout'   %}">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+        <br>
+        
+
+        
+
+
+
+
+    </body>
+</html>

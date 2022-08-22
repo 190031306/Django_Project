@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>
+                ::USER HOME::
+            </title>
+        </head>
+    <body>
+        <h2 align=center>Welcome {{uname}}</h2><hr color="red"><hr color="red">
+        <br><br>
+        <a href="{% url 'userhome' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'changepwd' %}">Change password</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'searchcontent' %}">Search Content</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'ulogout' %}">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <br>
+        <h3 align="center"><u>Search Content</u></h3>
+        <form method="post" action="{% url 'searchcontent1' %}">
+            {% csrf_token %}
+      <table align=center height=100>
+          <tr>
+            <td>Enter Keyword</td>
+            <td>
+                <input type="search" name="keyword" required>
+            </td>
+          </tr>
+          <tr>
+            <td colspan=2 align="center">
+                <input type="Submit" value="Search">
+            </td>
+          </tr>
+      </table>
+      </form>
+        
+
+
+
+
+    </body>
+</html>
